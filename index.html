@@ -3,227 +3,239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>⚡ Mustafa Ali | Developer Portfolio</title>
+<title>Ghulam Mustafa Ali | Elite Portfolio</title>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
 
-    body {
-        background: radial-gradient(circle at top, #0f172a, #020617);
-        color: white;
-        overflow-x: hidden;
-    }
+body {
+    background: radial-gradient(circle at top, #0b1220, #05070f);
+    color: #e5e7eb;
+    overflow-x: hidden;
+}
 
-    /* FLOATING GLOW BACKGROUND */
-    .glow {
-        position: absolute;
-        width: 400px;
-        height: 400px;
-        background: #38bdf8;
-        filter: blur(150px);
-        opacity: 0.2;
-        border-radius: 50%;
-        top: 10%;
-        left: 5%;
-        animation: float 6s ease-in-out infinite;
-    }
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background: rgba(10, 15, 30, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    z-index: 10;
+}
 
-    .glow2 {
-        position: absolute;
-        width: 400px;
-        height: 400px;
-        background: #a855f7;
-        filter: blur(150px);
-        opacity: 0.2;
-        border-radius: 50%;
-        bottom: 10%;
-        right: 5%;
-        animation: float 7s ease-in-out infinite;
-    }
+nav a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
-    @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
-    }
+nav a:hover {
+    color: #38bdf8;
+}
 
-    /* HERO */
-    .hero {
-        text-align: center;
-        padding: 120px 20px 80px;
-        position: relative;
-    }
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+}
 
-    .hero h1 {
-        font-size: 60px;
-        font-weight: 800;
-        background: linear-gradient(90deg, #38bdf8, #a855f7);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        letter-spacing: 2px;
-    }
+.hero h1 {
+    font-size: 64px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #38bdf8, #a855f7, #22c55e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    .hero p {
-        font-size: 22px;
-        margin-top: 15px;
-        opacity: 0.8;
-    }
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #9ca3af;
+}
 
-    .badge {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 8px 16px;
-        background: rgba(56,189,248,0.15);
-        border: 1px solid #38bdf8;
-        border-radius: 50px;
-        font-size: 14px;
-    }
+.badge {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #38bdf8;
+    border-radius: 999px;
+    color: #38bdf8;
+}
 
-    /* SECTIONS */
-    section {
-        max-width: 1000px;
-        margin: auto;
-        padding: 60px 20px;
-    }
+/* SECTIONS */
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 20px;
+}
 
-    h2 {
-        font-size: 30px;
-        margin-bottom: 20px;
-        color: #38bdf8;
-        letter-spacing: 1px;
-    }
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
 
-    .card {
-        background: rgba(255,255,255,0.05);
-        border: 1px solid rgba(255,255,255,0.1);
-        padding: 25px;
-        border-radius: 15px;
-        margin: 15px 0;
-        transition: 0.3s;
-        backdrop-filter: blur(10px);
-    }
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 15px 0;
+    transition: 0.3s;
+}
 
-    .card:hover {
-        transform: scale(1.03);
-        border: 1px solid #38bdf8;
-        box-shadow: 0 0 25px rgba(56,189,248,0.3);
-    }
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 30px rgba(56,189,248,0.15);
+}
 
-    /* SKILLS */
-    .skill {
-        margin: 15px 0;
-        font-weight: 600;
-    }
+/* SKILLS */
+.skill {
+    margin: 15px 0;
+    font-weight: 600;
+}
 
-    .bar {
-        height: 12px;
-        background: #1e293b;
-        border-radius: 50px;
-        overflow: hidden;
-    }
+.bar {
+    height: 10px;
+    background: #111827;
+    border-radius: 50px;
+    overflow: hidden;
+}
 
-    .progress {
-        height: 100%;
-        background: linear-gradient(90deg, #38bdf8, #a855f7);
-        border-radius: 50px;
-    }
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    border-radius: 50px;
+    animation: load 2s ease-in-out;
+}
 
-    /* ICON STYLE */
-    .icon {
-        margin-right: 8px;
-    }
+@keyframes load {
+    from { width: 0; }
+}
 
-    /* CONTACT */
-    .contact {
-        text-align: center;
-        font-size: 18px;
-    }
-
-    footer {
-        text-align: center;
-        padding: 30px;
-        opacity: 0.6;
-    }
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.5;
+    font-size: 14px;
+}
 </style>
 
 </head>
 
 <body>
 
-<div class="glow"></div>
-<div class="glow2"></div>
+<!-- NAV -->
+<nav>
+    <a href="#about">About</a>
+    <a href="#objective">Objective</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
 
 <!-- HERO -->
 <div class="hero">
-    <h1>⚡ Ghulam Mustafa Ali</h1>
-    <p>💻 Computer Engineer | 🚀 Developer | 🧠 Problem Solver</p>
-    <div class="badge">🔥 Open to Internships & Opportunities</div>
+    <h1>Ghulam Mustafa Ali</h1>
+    <p>Computer Engineering Student • Developer • Problem Solver</p>
+    <div class="badge">🚀 Seeking Internship & Industry Experience</div>
 </div>
 
 <!-- ABOUT -->
-<section>
-    <h2>📌 About Me</h2>
+<section id="about">
+    <h2>About Me</h2>
     <div class="card">
         Passionate Computer Engineering student at NUML with strong interest in software development,
-        algorithms, and building real-world applications using modern technologies.
+        algorithms, and building scalable real-world applications.
+    </div>
+</section>
+
+<!-- OBJECTIVE -->
+<section id="objective">
+    <h2>Career Objective</h2>
+    <div class="card">
+        To secure a challenging internship position in a reputable organization where I can apply my
+        programming skills, enhance my technical knowledge, and contribute to real-world software development projects
+        while growing as a professional engineer.
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <h2>Education</h2>
+    <div class="card">
+        <b>BS Computer Engineering</b><br>
+        National University of Modern Languages (NUML)<br>
+        Expected Graduation: 2029<br>
+        Current CGPA: 2.67
     </div>
 </section>
 
 <!-- SKILLS -->
-<section>
-    <h2>⚙️ Skills</h2>
+<section id="skills">
+    <h2>Skills</h2>
 
-    <div class="skill">💻 C++
+    <div class="skill">C++
         <div class="bar"><div class="progress" style="width:90%"></div></div>
     </div>
 
-    <div class="skill">☕ Java
+    <div class="skill">Java
         <div class="bar"><div class="progress" style="width:80%"></div></div>
     </div>
 
-    <div class="skill">🌐 HTML / CSS
+    <div class="skill">HTML / CSS
         <div class="bar"><div class="progress" style="width:95%"></div></div>
     </div>
 
-    <div class="skill">🔧 Git & GitHub
+    <div class="skill">Git & GitHub
         <div class="bar"><div class="progress" style="width:85%"></div></div>
     </div>
 </section>
 
 <!-- PROJECTS -->
-<section>
-    <h2>🚀 Projects</h2>
+<section id="projects">
+    <h2>Projects</h2>
 
     <div class="card">
-        <h3>📄 Digitized CV Website</h3>
-        <p>Modern CV website built using HTML & CSS and deployed using GitHub + Vercel.</p>
+        <b>Digitized CV Website</b><br>
+        Built and deployed a responsive CV using HTML, CSS, GitHub, and Vercel.
     </div>
 
     <div class="card">
-        <h3>🧠 OOP Programming Projects</h3>
-        <p>Developed multiple C++ object-oriented programs during academic coursework.</p>
+        <b>OOP Programming Projects</b><br>
+        Developed multiple C++ projects using Object-Oriented Programming concepts.
     </div>
 </section>
 
 <!-- CONTACT -->
-<section>
-    <h2>📞 Contact</h2>
-
-    <div class="card contact">
-        📧 Email: moostapha.ali06@gmail.com <br>
-        📱 Phone: 0346-6759023 <br>
-        💼 GitHub: mustafaali06-cs
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        Email: moostapha.ali06@gmail.com<br>
+        Phone: 0346-6759023<br>
+        GitHub: mustafaali06-cs
     </div>
 </section>
 
 <footer>
-    ⚡ Built by Ghulam Mustafa Ali | Powered by GitHub + Vercel 🚀
+    © 2026 Ghulam Mustafa Ali | Built with HTML + CSS + Git + Vercel
 </footer>
 
 </body>
