@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mustafa Ali | Full Width Portfolio</title>
+<title>Mustafa Ali | Portfolio</title>
 
 <style>
 * {
@@ -18,57 +18,59 @@ body {
     color: white;
 }
 
-/* TOP HEADER */
+/* HEADER */
 .header {
-    width: 100%;
-    padding: 60px 40px;
-    background: linear-gradient(90deg, #0f172a, #111827);
+    padding: 40px;
+    background: #111827;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .header h1 {
-    font-size: 48px;
+    font-size: 40px;
 }
 
-.header p {
+.contact {
+    font-size: 14px;
     color: #9ca3af;
+    line-height: 1.8;
 }
 
-/* GRID LAYOUT FULL WIDTH */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    width: 100%;
+/* SECTION */
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
 }
 
-/* SECTION BOX */
-.box {
-    padding: 40px;
-    border: 1px solid rgba(255,255,255,0.08);
-    min-height: 220px;
-}
-
-.box h2 {
+.section h2 {
     color: #38bdf8;
     margin-bottom: 15px;
+    border-left: 4px solid #38bdf8;
+    padding-left: 10px;
 }
 
-/* LIST STYLE */
-ul {
-    margin-left: 20px;
+/* PARAGRAPH CARD */
+.card {
+    background: rgba(255,255,255,0.04);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+    margin: 10px 0;
 }
 
-li {
-    margin: 8px 0;
+/* GRID CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
 }
 
-/* SKILLS BAR */
+/* SKILL BAR */
 .bar {
-    width: 100%;
-    height: 10px;
+    height: 8px;
     background: #1f2937;
     border-radius: 20px;
     overflow: hidden;
@@ -77,29 +79,24 @@ li {
 
 .progress {
     height: 100%;
-    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    background: #38bdf8;
 }
 
-/* FULL WIDTH FOOTER */
+/* LINKS */
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
 .footer {
-    width: 100%;
     text-align: center;
-    padding: 25px;
-    background: #111827;
-    color: #9ca3af;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .header {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+    padding: 20px;
+    color: #6b7280;
 }
 </style>
 
@@ -107,88 +104,104 @@ li {
 
 <body>
 
-<!-- HEADER -->
+<!-- HEADER (CONTACT TOP) -->
 <div class="header">
     <div>
         <h1>Mustafa Ali</h1>
         <p>Computer Engineering Student | Developer</p>
     </div>
-    <div>
-        📧 moostapha.ali06@gmail.com<br>
-        📱 0346-6759023
+
+    <div class="contact">
+        📞 0346-6759023 <br>
+        📧 moostapha.ali06@gmail.com <br>
+        🔗 <a href="#">LinkedIn</a> | <a href="#">GitHub</a>
     </div>
 </div>
 
-<!-- GRID CONTENT (FULL SCREEN USE) -->
-<div class="grid">
-
-    <div class="box">
-        <h2>About</h2>
-        <ul>
-            <li>Computer Engineering student at NUML</li>
-            <li>Passionate about software development</li>
-            <li>Focused on real-world problem solving</li>
-        </ul>
+<!-- ABOUT + OBJECTIVE -->
+<div class="section">
+    <h2>About & Career Objective</h2>
+    <div class="card">
+        Computer Engineering student at NUML with strong interest in software development, problem solving,
+        and system design. Seeking an internship opportunity to apply programming skills in real-world environments,
+        gain industry experience, and contribute to meaningful software projects.
     </div>
+</div>
 
-    <div class="box">
-        <h2>Career Objective</h2>
-        <ul>
-            <li>Secure a software engineering internship</li>
-            <li>Gain industry-level experience</li>
-            <li>Improve coding & system design skills</li>
-        </ul>
+<!-- EDUCATION -->
+<div class="section">
+    <h2>Education</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <b>University</b><br><br>
+            BS Computer Engineering<br>
+            NUML (National University of Modern Languages)<br>
+            Expected Graduation: 2029<br>
+            CGPA: 2.67
+        </div>
+
+        <div class="card">
+            <b>Intermediate (ICS)</b><br><br>
+            Computer Science Background<br>
+            Strong foundation in Mathematics & Programming Logic
+        </div>
+
     </div>
+</div>
 
-    <div class="box">
-        <h2>Education</h2>
-        <ul>
-            <li>BS Computer Engineering — NUML</li>
-            <li>Expected Graduation: 2029</li>
-            <li>CGPA: 2.67</li>
-        </ul>
+<!-- SKILLS -->
+<div class="section">
+    <h2>Skills</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            C++
+            <div class="bar"><div class="progress" style="width:90%"></div></div>
+        </div>
+
+        <div class="card">
+            Java
+            <div class="bar"><div class="progress" style="width:80%"></div></div>
+        </div>
+
+        <div class="card">
+            HTML / CSS
+            <div class="bar"><div class="progress" style="width:95%"></div></div>
+        </div>
+
+        <div class="card">
+            Git & GitHub
+            <div class="bar"><div class="progress" style="width:85%"></div></div>
+        </div>
+
     </div>
+</div>
 
-    <div class="box">
-        <h2>Skills</h2>
+<!-- PROJECTS -->
+<div class="section">
+    <h2>Projects</h2>
 
-        <p>C++</p>
-        <div class="bar"><div class="progress" style="width:90%"></div></div>
+    <div class="grid">
 
-        <p>Java</p>
-        <div class="bar"><div class="progress" style="width:80%"></div></div>
+        <div class="card">
+            <b>CV Portfolio Website</b><br>
+            Built and deployed using HTML, CSS, GitHub, and Vercel.
+        </div>
 
-        <p>HTML / CSS</p>
-        <div class="bar"><div class="progress" style="width:95%"></div></div>
+        <div class="card">
+            <b>OOP Projects</b><br>
+            Developed multiple C++ console applications using OOP concepts.
+        </div>
 
-        <p>Git & GitHub</p>
-        <div class="bar"><div class="progress" style="width:85%"></div></div>
     </div>
-
-    <div class="box">
-        <h2>Experience</h2>
-        <ul>
-            <li>Built CV website using HTML/CSS</li>
-            <li>GitHub project management</li>
-            <li>Deployed using Vercel</li>
-        </ul>
-    </div>
-
-    <div class="box">
-        <h2>Software & Tools</h2>
-        <ul>
-            <li>VS Code</li>
-            <li>Git & GitHub</li>
-            <li>PowerShell</li>
-            <li>Windows OS</li>
-        </ul>
-    </div>
-
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-    © 2026 Mustafa Ali | Full-Width Professional Portfolio
+    © 2026 Mustafa Ali | Portfolio Website
 </div>
 
 </body>
