@@ -1,40 +1,131 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Ghulam Mustafa Ali - CV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghulam Mustafa Ali - CV</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: white;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 50px auto;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 5px;
+        animation: slideDown 1s ease-in-out;
+    }
+
+    p.subtitle {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 18px;
+        opacity: 0.8;
+    }
+
+    h2 {
+        border-left: 5px solid #00c6ff;
+        padding-left: 10px;
+        margin-top: 25px;
+    }
+
+    ul {
+        line-height: 1.8;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.08);
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+        background: rgba(255,255,255,0.15);
+    }
+
+    .contact {
+        text-align: center;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 5px;
+        background: #00c6ff;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+        from { transform: translateY(-30px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+</style>
+
 </head>
 
 <body>
 
+<div class="container">
+
     <h1>Ghulam Mustafa Ali</h1>
-    <p><b>Computer Engineering Student at NUML</b></p>
+    <p class="subtitle">Computer Engineering Student at NUML</p>
 
-    <hr>
+    <div class="contact card">
+        <h2>Contact</h2>
+        <p>Email: moostapha.ali06@gmail.com</p>
+        <p>Phone: 0346-6759023</p>
+    </div>
 
-    <h2>Objective</h2>
-    <p>
-        Motivated Computer Engineering student with interest in software development,
-        programming, and problem solving. Seeking opportunities to enhance technical skills.
-    </p>
+    <div class="card">
+        <h2>Objective</h2>
+        <p>
+            Motivated Computer Engineering student passionate about software development,
+            programming, and problem solving.
+        </p>
+    </div>
 
-    <h2>Skills</h2>
-    <ul>
-        <li>C++</li>
-        <li>Java</li>
-        <li>HTML / CSS</li>
-        <li>Git & GitHub</li>
-        <li>Problem Solving</li>
-    </ul>
+    <div class="card">
+        <h2>Skills</h2>
+        <span class="badge">C++</span>
+        <span class="badge">Java</span>
+        <span class="badge">HTML</span>
+        <span class="badge">CSS</span>
+        <span class="badge">Git & GitHub</span>
+        <span class="badge">Problem Solving</span>
+    </div>
 
-    <h2>Education</h2>
-    <p>BS Computer Engineering - NUML</p>
-    <p>CGPA: 2.67</p>
-    <p>Expected Graduation: 2029</p>
+    <div class="card">
+        <h2>Education</h2>
+        <p>BS Computer Engineering - NUML</p>
+        <p>CGPA: 2.67</p>
+        <p>Expected Graduation: 2029</p>
+    </div>
 
-    <h2>Contact</h2>
-    <p>Email: moostapha.ali06@gmail.com</p>
-    <p>Phone: 0346-6759023</p>
+</div>
 
 </body>
 </html>
