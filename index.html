@@ -3,156 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mustafa Ali | Software Engineer Portfolio</title>
+<title>Mustafa Ali | Developer Portfolio</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background: #0b1220;
-    color: #e5e7eb;
+    background: #f4f6f9;
+    color: #111827;
 }
 
-/* NAV */
-nav {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 15px;
-    background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-nav a {
-    color: #9ca3af;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-nav a:hover {
-    color: #38bdf8;
-}
-
-/* HERO */
-.hero {
+/* HEADER */
+.header {
+    background: #111827;
+    color: white;
     text-align: center;
-    padding: 120px 20px 60px;
-}
-
-.hero h1 {
-    font-size: 60px;
-    font-weight: 800;
-    background: linear-gradient(90deg, #38bdf8, #a855f7, #22c55e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-    font-size: 18px;
-    color: #9ca3af;
-    margin-top: 10px;
-}
-
-.cta {
-    margin-top: 25px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 18px;
-    margin: 5px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.primary {
-    background: #38bdf8;
-    color: black;
-}
-
-.primary:hover {
-    background: #0ea5e9;
-}
-
-.secondary {
-    border: 1px solid #38bdf8;
-    color: #38bdf8;
-}
-
-.secondary:hover {
-    background: rgba(56,189,248,0.1);
-}
-
-/* SECTIONS */
-section {
-    max-width: 1000px;
-    margin: auto;
     padding: 60px 20px;
 }
 
-h2 {
-    font-size: 26px;
-    margin-bottom: 20px;
-    color: #38bdf8;
+.header h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+.header p {
+    margin-top: 10px;
+    color: #9ca3af;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* SECTION */
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 22px;
+    border-left: 5px solid #2563eb;
+    padding-left: 10px;
+    margin-bottom: 15px;
 }
 
 /* CARD */
 .card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    padding: 22px;
-    border-radius: 12px;
-    margin: 15px 0;
-    transition: 0.3s;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #38bdf8;
+/* LIST STYLE */
+ul {
+    margin-left: 20px;
+}
+
+ul li {
+    margin: 8px 0;
 }
 
 /* SKILLS */
 .skill {
-    margin: 12px 0;
-    font-weight: 600;
+    margin: 10px 0;
 }
 
 .bar {
-    height: 10px;
-    background: #111827;
-    border-radius: 50px;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 20px;
     overflow: hidden;
 }
 
 .progress {
     height: 100%;
-    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    background: #2563eb;
 }
 
-/* FOOTER */
-footer {
+/* CONTACT */
+.footer {
     text-align: center;
     padding: 30px;
-    opacity: 0.5;
+    color: #6b7280;
+    font-size: 14px;
 }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+/* BUTTON STYLE */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
 }
 </style>
 
@@ -160,67 +114,105 @@ footer {
 
 <body>
 
-<!-- NAV -->
-<nav>
-    <a href="#about">About</a>
-    <a href="#objective">Objective</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
+<div class="header">
     <h1>Mustafa Ali</h1>
-    <p>Computer Engineering Student | Aspiring Software Engineer | Problem Solver</p>
-
-    <div class="cta">
-        <a class="btn primary" href="mailto:moostapha.ali06@gmail.com">Hire Me</a>
-        <a class="btn secondary" href="https://github.com/">GitHub</a>
-    </div>
+    <p>Computer Engineering Student | Developer | Problem Solver</p>
 </div>
 
-<!-- ABOUT -->
-<section id="about">
-    <h2>About</h2>
-    <div class="card">
-        Computer Engineering student at NUML with strong interest in software development,
-        system design, and building scalable applications.
-    </div>
-</section>
+<div class="container">
 
-<!-- OBJECTIVE -->
-<section id="objective">
-    <h2>Career Objective</h2>
-    <div class="card">
-        Seeking a professional internship opportunity to apply programming skills,
-        gain industry experience, and contribute to real-world software development.
-    </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-    <h2>Education</h2>
-    <div class="card">
-        <b>BS Computer Engineering</b><br>
-        NUML (National University of Modern Languages)<br>
-        Expected Graduation: 2029<br>
-        CGPA: 2.67
-    </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-    <h2>Skills</h2>
-
-    <div class="skill">C++
-        <div class="bar"><div class="progress" style="width:90%"></div></div>
+    <!-- ABOUT -->
+    <div class="section">
+        <h2>• About</h2>
+        <div class="card">
+            • Computer Engineering student at NUML  
+            <br>• Passionate about software development  
+            <br>• Interested in real-world problem solving  
+        </div>
     </div>
 
-    <div class="skill">Java
-        <div class="bar"><div class="progress" style="width:80%"></div></div>
+    <!-- OBJECTIVE -->
+    <div class="section">
+        <h2>• Career Objective</h2>
+        <div class="card">
+            • To secure an internship in a software engineering environment  
+            <br>• To improve programming and development skills  
+            <br>• To contribute to real-world projects  
+        </div>
     </div>
 
-    <div class="skill
+    <!-- EDUCATION -->
+    <div class="section">
+        <h2>• Education</h2>
+        <div class="card">
+            • BS Computer Engineering — NUML  
+            <br>• Expected Graduation: 2029  
+            <br>• CGPA: 2.67  
+        </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+        <h2>• Skills</h2>
+        <div class="card">
+
+            <div class="skill">• C++
+                <div class="bar"><div class="progress" style="width:90%"></div></div>
+            </div>
+
+            <div class="skill">• Java
+                <div class="bar"><div class="progress" style="width:80%"></div></div>
+            </div>
+
+            <div class="skill">• HTML / CSS
+                <div class="bar"><div class="progress" style="width:95%"></div></div>
+            </div>
+
+            <div class="skill">• Git & GitHub
+                <div class="bar"><div class="progress" style="width:85%"></div></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+        <h2>• Experience</h2>
+        <div class="card">
+            • Built CV website using HTML, CSS  
+            <br>• GitHub version control usage  
+            <br>• Deployed project using Vercel  
+        </div>
+    </div>
+
+    <!-- SOFTWARE -->
+    <div class="section">
+        <h2>• Software & Tools</h2>
+        <div class="card">
+            • VS Code  
+            <br>• Git & GitHub  
+            <br>• PowerShell  
+            <br>• Windows OS  
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section">
+        <h2>• Contact</h2>
+        <div class="card">
+            • Email: moostapha.ali06@gmail.com  
+            <br>• Phone: 0346-6759023  
+            <br>• GitHub: mustafaali06-cs  
+        </div>
+    </div>
+
+    <a class="btn" href="mailto:moostapha.ali06@gmail.com">• Contact Me</a>
+
+</div>
+
+<div class="footer">
+    © 2026 Mustafa Ali • Built with HTML & CSS • Deployed on Vercel
+</div>
+
+</body>
+</html>
