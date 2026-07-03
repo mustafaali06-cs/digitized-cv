@@ -3,85 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ghulam Mustafa Ali - CV</title>
+<title>Ghulam Mustafa Ali | Portfolio</title>
 
 <style>
-    body {
+    * {
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #1e3c72, #2a5298);
+    }
+
+    body {
+        background: #0f172a;
         color: white;
+        scroll-behavior: smooth;
     }
 
-    .container {
+    /* NAVBAR */
+    nav {
+        position: sticky;
+        top: 0;
+        background: rgba(15, 23, 42, 0.9);
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 15px;
+        border-bottom: 1px solid #1e293b;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #38bdf8;
+    }
+
+    /* HERO */
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 20px;
+        margin-top: 10px;
+        opacity: 0.9;
+    }
+
+    /* SECTIONS */
+    section {
         max-width: 900px;
-        margin: 50px auto;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 30px;
-        border-radius: 15px;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-        animation: fadeIn 1s ease-in-out;
-    }
-
-    h1 {
-        text-align: center;
-        font-size: 40px;
-        margin-bottom: 5px;
-        animation: slideDown 1s ease-in-out;
-    }
-
-    p.subtitle {
-        text-align: center;
-        margin-bottom: 30px;
-        font-size: 18px;
-        opacity: 0.8;
+        margin: auto;
+        padding: 60px 20px;
     }
 
     h2 {
-        border-left: 5px solid #00c6ff;
+        margin-bottom: 20px;
+        border-left: 5px solid #38bdf8;
         padding-left: 10px;
-        margin-top: 25px;
     }
 
-    ul {
-        line-height: 1.8;
-    }
-
+    /* CARDS */
     .card {
-        background: rgba(255,255,255,0.08);
-        padding: 15px;
+        background: #1e293b;
+        padding: 20px;
+        margin: 15px 0;
         border-radius: 10px;
-        margin-top: 10px;
         transition: 0.3s;
     }
 
     .card:hover {
-        transform: scale(1.02);
-        background: rgba(255,255,255,0.15);
+        transform: translateY(-5px);
+        background: #334155;
     }
 
+    /* SKILLS */
+    .skill {
+        margin: 10px 0;
+    }
+
+    .bar {
+        width: 100%;
+        background: #334155;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .progress {
+        height: 10px;
+        background: #38bdf8;
+    }
+
+    /* CONTACT */
     .contact {
         text-align: center;
     }
 
-    .badge {
-        display: inline-block;
-        padding: 5px 10px;
-        margin: 5px;
-        background: #00c6ff;
-        border-radius: 20px;
-        font-size: 12px;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-
-    @keyframes slideDown {
-        from { transform: translateY(-30px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
+    footer {
+        text-align: center;
+        padding: 20px;
+        border-top: 1px solid #1e293b;
+        margin-top: 40px;
+        font-size: 14px;
+        opacity: 0.7;
     }
 </style>
 
@@ -89,43 +122,77 @@
 
 <body>
 
-<div class="container">
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
 
+<div class="hero">
     <h1>Ghulam Mustafa Ali</h1>
-    <p class="subtitle">Computer Engineering Student at NUML</p>
+    <p>Computer Engineering Student | Developer | Problem Solver</p>
+</div>
 
-    <div class="contact card">
-        <h2>Contact</h2>
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        Motivated Computer Engineering student at NUML passionate about software development,
+        algorithms, and building real-world applications.
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skill">
+        C++
+        <div class="bar"><div class="progress" style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">
+        Java
+        <div class="bar"><div class="progress" style="width:75%"></div></div>
+    </div>
+
+    <div class="skill">
+        HTML / CSS
+        <div class="bar"><div class="progress" style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">
+        Git & GitHub
+        <div class="bar"><div class="progress" style="width:80%"></div></div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>Digitized CV Website</h3>
+        <p>Built and deployed a responsive CV website using HTML, CSS, Git & Vercel.</p>
+    </div>
+
+    <div class="card">
+        <h3>OOP Mini Projects</h3>
+        <p>Developed multiple C++ programs using Object-Oriented Programming concepts.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+
+    <div class="card contact">
         <p>Email: moostapha.ali06@gmail.com</p>
         <p>Phone: 0346-6759023</p>
+        <p>GitHub: mustafaali06-cs</p>
     </div>
+</section>
 
-    <div class="card">
-        <h2>Objective</h2>
-        <p>
-            Motivated Computer Engineering student passionate about software development,
-            programming, and problem solving.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>Skills</h2>
-        <span class="badge">C++</span>
-        <span class="badge">Java</span>
-        <span class="badge">HTML</span>
-        <span class="badge">CSS</span>
-        <span class="badge">Git & GitHub</span>
-        <span class="badge">Problem Solving</span>
-    </div>
-
-    <div class="card">
-        <h2>Education</h2>
-        <p>BS Computer Engineering - NUML</p>
-        <p>CGPA: 2.67</p>
-        <p>Expected Graduation: 2029</p>
-    </div>
-
-</div>
+<footer>
+    © 2026 Ghulam Mustafa Ali | Portfolio
+</footer>
 
 </body>
 </html>
