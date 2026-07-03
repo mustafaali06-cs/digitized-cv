@@ -14,28 +14,34 @@
 }
 
 body {
-    background: #0b1220;
-    color: white;
+    background: #0a0f1c;
+    color: #e5e7eb;
 }
 
 /* HEADER */
 .header {
+    background: linear-gradient(90deg, #0f172a, #111827);
     padding: 40px;
-    background: #111827;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .header h1 {
-    font-size: 40px;
+    font-size: 42px;
 }
 
+.tag {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+/* CONTACT */
 .contact {
+    text-align: right;
     font-size: 14px;
     color: #9ca3af;
-    line-height: 1.8;
 }
 
 /* SECTION */
@@ -48,55 +54,51 @@ body {
 .section h2 {
     color: #38bdf8;
     margin-bottom: 15px;
-    border-left: 4px solid #38bdf8;
-    padding-left: 10px;
+    font-size: 20px;
 }
 
-/* PARAGRAPH CARD */
+/* CARD */
 .card {
-    background: rgba(255,255,255,0.04);
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.08);
     margin: 10px 0;
 }
 
-/* GRID CARDS */
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
 }
 
-/* SKILL BAR */
+/* SKILLS */
 .bar {
     height: 8px;
     background: #1f2937;
     border-radius: 20px;
     overflow: hidden;
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
 .progress {
     height: 100%;
-    background: #38bdf8;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
 }
 
-/* LINKS */
-a {
+/* ICON STYLE */
+.icon {
     color: #38bdf8;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    margin-right: 6px;
 }
 
 /* FOOTER */
 .footer {
     text-align: center;
-    padding: 20px;
-    color: #6b7280;
+    padding: 30px;
+    color: #9ca3af;
+    border-top: 1px solid rgba(255,255,255,0.08);
 }
 </style>
 
@@ -104,48 +106,47 @@ a:hover {
 
 <body>
 
-<!-- HEADER (CONTACT TOP) -->
+<!-- HEADER -->
 <div class="header">
     <div>
-        <h1>Mustafa Ali</h1>
-        <p>Computer Engineering Student | Developer</p>
+        <h1>⚡ Mustafa Ali</h1>
+        <div class="tag">⟐ Computer Engineering Student</div>
     </div>
 
     <div class="contact">
-        📞 0346-6759023 <br>
-        📧 moostapha.ali06@gmail.com <br>
-        🔗 <a href="#">LinkedIn</a> | <a href="#">GitHub</a>
+        📞 0346-6759023<br>
+        📧 moostapha.ali06@gmail.com<br>
+        🔗 GitHub | LinkedIn
     </div>
 </div>
 
-<!-- ABOUT + OBJECTIVE -->
+<!-- ABOUT -->
 <div class="section">
-    <h2>About & Career Objective</h2>
+    <h2>🧠 About & Objective</h2>
     <div class="card">
-        Computer Engineering student at NUML with strong interest in software development, problem solving,
-        and system design. Seeking an internship opportunity to apply programming skills in real-world environments,
-        gain industry experience, and contribute to meaningful software projects.
+        ⚡ Computer Engineering student at NUML with strong interest in software development and system design.  
+        🎯 Seeking an internship to apply programming skills, improve technical expertise, and contribute to real-world projects.
     </div>
 </div>
 
 <!-- EDUCATION -->
 <div class="section">
-    <h2>Education</h2>
+    <h2>🎓 Education</h2>
 
     <div class="grid">
 
         <div class="card">
-            <b>University</b><br><br>
+            🏫 <b>University</b><br><br>
             BS Computer Engineering<br>
-            NUML (National University of Modern Languages)<br>
-            Expected Graduation: 2029<br>
-            CGPA: 2.67
+            NUML – National University of Modern Languages<br>
+            📅 Expected Graduation: 2029<br>
+            📊 CGPA: 2.67
         </div>
 
         <div class="card">
-            <b>Intermediate (ICS)</b><br><br>
+            📘 <b>Intermediate (ICS)</b><br><br>
             Computer Science Background<br>
-            Strong foundation in Mathematics & Programming Logic
+            Strong foundation in logic, math & programming
         </div>
 
     </div>
@@ -153,27 +154,27 @@ a:hover {
 
 <!-- SKILLS -->
 <div class="section">
-    <h2>Skills</h2>
+    <h2>⚙️ Skills</h2>
 
     <div class="grid">
 
         <div class="card">
-            C++
+            💻 C++
             <div class="bar"><div class="progress" style="width:90%"></div></div>
         </div>
 
         <div class="card">
-            Java
+            ☕ Java
             <div class="bar"><div class="progress" style="width:80%"></div></div>
         </div>
 
         <div class="card">
-            HTML / CSS
+            🌐 HTML / CSS
             <div class="bar"><div class="progress" style="width:95%"></div></div>
         </div>
 
         <div class="card">
-            Git & GitHub
+            🔧 Git & GitHub
             <div class="bar"><div class="progress" style="width:85%"></div></div>
         </div>
 
@@ -182,18 +183,18 @@ a:hover {
 
 <!-- PROJECTS -->
 <div class="section">
-    <h2>Projects</h2>
+    <h2>🚀 Projects</h2>
 
     <div class="grid">
 
         <div class="card">
-            <b>CV Portfolio Website</b><br>
-            Built and deployed using HTML, CSS, GitHub, and Vercel.
+            📄 CV Portfolio Website<br>
+            Built and deployed using HTML, CSS, GitHub & Vercel
         </div>
 
         <div class="card">
-            <b>OOP Projects</b><br>
-            Developed multiple C++ console applications using OOP concepts.
+            🧩 OOP Projects<br>
+            Console-based applications using C++ OOP concepts
         </div>
 
     </div>
@@ -201,7 +202,7 @@ a:hover {
 
 <!-- FOOTER -->
 <div class="footer">
-    © 2026 Mustafa Ali | Portfolio Website
+    ⚡ @ Portfolio • Mustafa Ali • Built with HTML & CSS
 </div>
 
 </body>
